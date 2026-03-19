@@ -16,7 +16,7 @@ connectDB();
 
 // middleware
 app.use(cors({
-  origin: ["https://finsight-dl.vercel.app/", "http://localhost:5173"],
+  origin: ["https://finsight-dl.vercel.app", "http://localhost:5173"],
 }));
 
 app.use(express.json());
