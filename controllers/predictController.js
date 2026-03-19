@@ -34,7 +34,7 @@ export const getPrediction = (req, res) => {
   // -----------------------------
   // 4️⃣ Call Python ML
   // -----------------------------
-  spawn("python3", ["ml/predict.py"]);
+  const py = spawn("python3", ["ml/predict.py"]);
 
   const input = JSON.stringify({ days, amounts });
   py.stdin.write(input);
