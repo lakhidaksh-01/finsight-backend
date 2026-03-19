@@ -1,0 +1,65 @@
+What each package does
+Package  	  Purpose
+
+express	      backend server
+mongoose	  MongoDB connection
+cors	      allow frontend requests
+dotenv	      environment variables
+bcryptjs	  password hashing
+jsonwebtoken  authentication
+
+
+Visual Architecture
+React Frontend
+      │
+      │ API Request
+      ▼
+Express Server (server.js)
+      │
+      ├── /api/auth ------> authRoutes
+      │                        │
+      │                        ▼
+      │                   authController
+      │
+      └── /api/expenses --> expenseRoutes
+                               │
+                               ▼
+                         expenseController
+                               │
+                               ▼
+                            MongoDB
+
+
+
+
+Frontend (React)
+      │
+      ▼
+server.js
+      │
+      ▼
+Routes
+      │
+      ▼
+Controllers
+      │
+      ▼
+Models
+      │
+      ▼
+MongoDB Database
+
+
+
+
+
+
+server.js
+
+Start the backend server
+Connect MongoDB
+Enable middleware
+Attach routes
+
+
+config/db.js (Database Connection)
